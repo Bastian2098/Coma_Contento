@@ -1,0 +1,78 @@
+CREATE TABLE Encargado(
+	codigo int not null,
+	nombre varchar(30) not null,
+	clave varchar(30) not null,
+	telefono varchar(30) not null,
+	primary key(codigo)
+);
+
+CREATE TABLE Region(
+	codigo int not null,
+	nombre varchar(30) not null,
+	primary key(codigo)
+);
+
+CREATE TABLE Enc_Reg(
+	cod_encargado_fk int not null UNIQUE,
+	cod_region_fk int not null UNIQUE,
+	primary key(cod_encargado_fk, cod_region_fk),
+	foreign key(cod_encargado_fk) references encargado(codigo),
+	foreign key(cod_region_fk) references region(codigo)
+);
+
+CREATE TABLE Ingrediente(
+	codigo int not null,
+	nombre varchar(30) not null,
+	primary key(codigo)
+);
+
+CREATE TABLE Receta(
+	codigo int not null,
+	instrucciones varchar(30) not null,
+	nivel varchar(2) not null,
+	primary key(codigo)
+);
+
+CREATE TABLE Ing_Rec(
+	cod_ingrediente_fk int not null,
+	cod_receta_fk int not null,
+	cantidad int not null,
+	foreign key(cod_ingrediente_fk) references Ingrediente(codigo),
+	foreign key(cod_receta_fk) references Receta(codigo)
+);
+
+CREATE TABLE Plato(
+	codigo int not null,
+	nombre varchar(30) not null,
+	descripcion varchar(100) not null,
+	precio int not null,
+	foto varchar(30) not null,
+	cod_receta_fk int not null,
+	cod_region_fk int not null,
+	primary key(codigo),
+	foreign key(cod_receta_fk) references Receta(codigo),
+	foreign key(cod_region_fk) references Region(codigo)
+);
+
+CREATE TABLE Carta(
+	codigo int not null,
+	vigencia date not null,
+	primary key(codigo)
+);
+
+CREATE TABLE PLa_Car(
+	cod_plato_fk int not null,
+	cod_carta_fk int not null,
+	foreign key(cod_plato_fk) references Plato(codigo),
+	foreign key(cod_carta_fk) references Carta(codigo)
+);
+
+CREATE TABLE Venta(
+	codigo int not null,
+	valor int not null,
+	fecha date not null,
+	cod_carta_fk int not null,
+	primary key(codigo),
+	foreign key(cod_carta_fk) references Carta(codigo)
+);
+
