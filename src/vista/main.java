@@ -6,9 +6,6 @@
 package vista;
 
 import controlador.Control;
-import logica.DAO.EncargadoDAO;
-import logica.DTO.EncargadoDTO;
-import persistencia.conexion;
 
 /**
  *

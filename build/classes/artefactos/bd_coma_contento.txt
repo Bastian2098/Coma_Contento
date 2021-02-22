@@ -76,3 +76,4 @@ CREATE TABLE Venta(
 	foreign key(cod_carta_fk) references Carta(codigo)
 );
 
+insert into plato(codigo, nombre, descripcion, precio, foto, cod_receta_fk, cod_region_fk) values (1, 'Bandeja Paisa', 'Pues una bandeja paisa xd', 10000, 'por ai esta xd', 10, 101);
