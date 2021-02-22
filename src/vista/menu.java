@@ -28,28 +28,95 @@ public class menu extends javax.swing.JPanel {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTree2 = new javax.swing.JTree();
 
         jMenuItem1.setText("jMenuItem1");
 
+        jTree1.setBackground(new java.awt.Color(204, 204, 255));
+        jTree1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTree1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Menú");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región del Pacifico");
+        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item1");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región del Caribe");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item2");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Andina");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item3");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región de la Orinoquia");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item4");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Insular");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item5");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Amazónica");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item6");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.setEditable(true);
+        jScrollPane2.setViewportView(jTree1);
+
         setBackground(new java.awt.Color(254, 254, 254));
-        setLayout(new java.awt.GridBagLayout());
+        setLayout(new java.awt.BorderLayout());
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        add(jScrollPane1, new java.awt.GridBagConstraints());
+        jTree2.setBackground(new java.awt.Color(204, 204, 255));
+        jTree2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTree2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Menú");
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región del Pacifico");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item1");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región del Caribe");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item2");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Andina");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item3");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región de la Orinoquia");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item4");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Insular");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item5");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Región Amazónica");
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("item6");
+        treeNode2.add(treeNode3);
+        treeNode1.add(treeNode2);
+        jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree2.setEditable(true);
+        jScrollPane3.setViewportView(jTree2);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 620));
+
+        add(jPanel2, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> jList1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTree jTree1;
+    private javax.swing.JTree jTree2;
     // End of variables declaration//GEN-END:variables
 }
