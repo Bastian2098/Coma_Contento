@@ -85,7 +85,7 @@ public class index extends javax.swing.JFrame {
                 labelRecetaMouseClicked(evt);
             }
         });
-        jPanel3.add(labelReceta, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 70, 70));
+        jPanel3.add(labelReceta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 70, 70));
 
         labelEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/camarero.png"))); // NOI18N
         labelEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,7 +101,7 @@ public class index extends javax.swing.JFrame {
                 labelCartaMouseClicked(evt);
             }
         });
-        jPanel3.add(labelCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 70, 70));
+        jPanel3.add(labelCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 70, 70));
 
         LabelPlato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pierna-de-pollo.png"))); // NOI18N
         LabelPlato.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -109,7 +109,7 @@ public class index extends javax.swing.JFrame {
                 LabelPlatoMouseClicked(evt);
             }
         });
-        jPanel3.add(LabelPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 60, 70));
+        jPanel3.add(LabelPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 60, 70));
 
         jLabel9.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,7 +119,7 @@ public class index extends javax.swing.JFrame {
                 jLabel9MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 60, 30));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 60, 30));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salida.png"))); // NOI18N
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,7 +147,7 @@ public class index extends javax.swing.JFrame {
                 jLabel14MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 60, 30));
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 60, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,7 +157,7 @@ public class index extends javax.swing.JFrame {
                 jLabel11MouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 80, 30));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 80, 30));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,6 +165,11 @@ public class index extends javax.swing.JFrame {
         jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 200, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/tienda.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 60, 70));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -259,13 +264,17 @@ public class index extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-
+         Contenedor.add(panel3);
         Contenedor.validate();
         panel2.setVisible(false);
         panel4.setVisible(false);
         panel5.setVisible(false);
-        panel3.setVisible(false);
+        panel3.setVisible(true);
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+      
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
